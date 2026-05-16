@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spain Total Solar Eclipse — 12 August 2026 · Trip Plan</title>
+<style>
+  :root {
+    --bg: #0a0a14;
+    --bg-elevated: #14141f;
+    --bg-card: #1a1a28;
+    --ink: #f3f0e8;
+    --ink-muted: #9e9aa8;
+    --ink-faint: #6b6878;
+    --accent: #ffb84d;
+    --accent-warm: #ff7a45;
+    --corona: #fff5d6;
+    --line: rgba(255,255,255,0.08);
+    --line-strong: rgba(255,255,255,0.16);
+    --good: #6ee7b7;
+    --warn: #fbbf24;
+    --bad: #f87171;
+    --maxw: 920px;
+  }
+
+  * { box-sizing: border-box; }
+
+  html { scroll-behavior: smooth; }
+
+  body {
+    margin: 0;
+    background: var(--bg);
+    color: var(--ink);
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    font-size: 16px;
+    line-height: 1.65;
+    -webkit-font-smoothing: antialiased;
+  }
+
+  /* HERO */
+  .hero {
+    position: relative;
+    padding: 100px 24px 80px;
+    text-align: center;
+    overflow: hidden;
+    background: radial-gradient(ellipse at center 40%, #1f1830 0%, var(--bg) 70%);
+    border-bottom: 1px solid var(--line);
+  }
+
+  .eclipse-art {
+    width: 180px;
+    height: 180px;
+    margin: 0 auto 40px;
+    position: relative;
+  }
+
+  .eclipse-art .corona {
+    position: absolute;
+    inset: -40%;
+    background: radial-gradient(circle, rgba(255,245,214,0.25) 30%, rgba(255,184,77,0.08) 50%, transparent 70%);
+    border-radius: 50%;
+    animation: pulse 4s ease-in-out infinite;
+  }
+
+  .eclipse-art .sun {
+    position: absolute;
+    inset: 0;
+    background: var(--accent);
+    border-radius: 50%;
+    box-shadow: 0 0 60px 10px rgba(255,184,77,0.5);
+  }
+
+  .eclipse-art .moon {
+    position: absolute;
+    inset: 0;
+    background: var(--bg);
+    border-radius: 50%;
+    transform: translate(-3%, -3%);
+    box-shadow: inset 12px 12px 30px rgba(0,0,0,0.5);
+  }
+
+  @keyframes pulse {
+    0%, 100% { opacity: 0.7; transform: scale(1); }
+    50% { opacity: 1; transform: scale(1.05); }
+  }
+
+  .hero h1 {
+    font-family: 'Crimson Pro', 'Georgia', serif;
+    font-size: clamp(2.2rem, 5vw, 3.6rem);
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    margin: 0 0 16px;
+  }
+
+  .hero h1 em {
+    font-style: italic;
+    color: var(--accent);
+  }
+
+  .hero .meta {
+    font-family: 'JetBrains Mono', 'SF Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    margin-top: 24px;
+  }
+
+  .hero .meta span + span::before {
+    content: " · ";
+    color: var(--ink-faint);
+    margin: 0 8px;
+  }
+
+  /* CONTAINER */
+  main {
+    max-width: var(--maxw);
+    margin: 0 auto;
+    padding: 80px 24px;
+  }
+
+  section { margin-bottom: 80px; }
+
+  h2 {
+    font-family: 'Crimson Pro', 'Georgia', serif;
+    font-size: 2rem;
+    font-weight: 500;
+    letter-spacing: -0.01em;
+    margin: 0 0 8px;
+    color: var(--ink);
+  }
+
+  h2 .num {
+    color: var(--accent);
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.95rem;
+    letter-spacing: 0.05em;
+    display: block;
+    margin-bottom: 4px;
+    text-transform: uppercase;
+    font-weight: 400;
+  }
+
+  h3 {
+    font-family: 'Crimson Pro', 'Georgia', serif;
+    font-size: 1.3rem;
+    font-weight: 500;
+    margin: 28px 0 10px;
+  }
+
+  p { margin: 0 0 16px; color: var(--ink); }
+
+  .lead {
+    font-size: 1.1rem;
+    color: var(--ink-muted);
+    margin-bottom: 24px;
+  }
+
+  /* TLDR */
+  .tldr {
+    background: linear-gradient(135deg, rgba(255,184,77,0.08) 0%, rgba(255,122,69,0.04) 100%);
+    border: 1px solid rgba(255,184,77,0.2);
+    border-radius: 8px;
+    padding: 32px;
+    margin-bottom: 60px;
+  }
+
+  .tldr-label {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--accent);
+    margin-bottom: 16px;
+  }
+
+  .tldr p {
+    font-size: 1.05rem;
+    color: var(--ink);
+    margin-bottom: 12px;
+  }
+
+  .tldr p:last-child { margin-bottom: 0; }
+
+  .tldr strong { color: var(--accent); font-weight: 600; }
+
+  /* TABLES */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 24px 0;
+    font-size: 0.95rem;
+  }
+
+  th, td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid var(--line);
+    vertical-align: top;
+  }
+
+  th {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    font-weight: 500;
+    border-bottom: 1px solid var(--line-strong);
+  }
+
+  tr:last-child td { border-bottom: none; }
+
+  td.mono {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--ink-muted);
+  }
+
+  /* RANK BADGES */
+  .rank {
+    display: inline-block;
+    width: 26px;
+    height: 26px;
+    line-height: 26px;
+    text-align: center;
+    border-radius: 50%;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    margin-right: 10px;
+    background: var(--bg-card);
+    border: 1px solid var(--line-strong);
+    color: var(--ink-muted);
+  }
+
+  .rank.r1 { background: var(--accent); color: #000; border-color: var(--accent); font-weight: 700; }
+  .rank.r2 { background: rgba(255,184,77,0.2); color: var(--accent); border-color: var(--accent); }
+
+  /* WEATHER BAR */
+  .bar {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+  }
+  .bar-fill {
+    width: 80px;
+    height: 6px;
+    background: var(--line-strong);
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+  }
+  .bar-fill::after {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; bottom: 0;
+    border-radius: 3px;
+  }
+  .bar-fill[data-level="excellent"]::after { width: 30%; background: var(--good); }
+  .bar-fill[data-level="good"]::after { width: 45%; background: var(--good); }
+  .bar-fill[data-level="ok"]::after { width: 55%; background: var(--warn); }
+  .bar-fill[data-level="poor"]::after { width: 75%; background: var(--bad); }
+
+  /* SPOT CARDS */
+  .spots { display: grid; gap: 20px; margin-top: 32px; }
+
+  .spot {
+    background: var(--bg-elevated);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 24px 28px;
+    transition: border-color 0.2s;
+  }
+
+  .spot:hover { border-color: var(--line-strong); }
+
+  .spot-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    gap: 16px;
+    margin-bottom: 8px;
+    flex-wrap: wrap;
+  }
+
+  .spot-title {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.35rem;
+    font-weight: 500;
+    margin: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .spot-stats {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    color: var(--ink-muted);
+  }
+
+  .spot-stats span + span::before {
+    content: " · ";
+    color: var(--ink-faint);
+    margin: 0 6px;
+  }
+
+  .spot-body { color: var(--ink-muted); font-size: 0.95rem; }
+
+  .spot.recommended {
+    border-color: rgba(255,184,77,0.3);
+    background: linear-gradient(135deg, rgba(255,184,77,0.04) 0%, var(--bg-elevated) 50%);
+  }
+
+  /* FLIGHTS */
+  .airports { display: grid; gap: 16px; margin-top: 24px; }
+  .airport {
+    background: var(--bg-elevated);
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    padding: 20px 24px;
+  }
+
+  .airport-head {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--line);
+  }
+
+  .airport-name {
+    font-family: 'Crimson Pro', serif;
+    font-size: 1.2rem;
+    font-weight: 500;
+    margin: 0;
+  }
+
+  .airport-code {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.85rem;
+    color: var(--ink-faint);
+  }
+
+  .routes { list-style: none; padding: 0; margin: 0; }
+
+  .route {
+    display: grid;
+    grid-template-columns: 100px 1fr;
+    gap: 16px;
+    padding: 8px 0;
+    font-size: 0.92rem;
+    align-items: baseline;
+  }
+
+  .route-dest {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.8rem;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .route-info { color: var(--ink-muted); }
+
+  /* CALLOUTS */
+  .callout {
+    border-left: 3px solid var(--accent);
+    padding: 16px 20px;
+    background: var(--bg-elevated);
+    margin: 24px 0;
+    border-radius: 0 4px 4px 0;
+    font-size: 0.95rem;
+  }
+
+  .callout.warn { border-left-color: var(--warn); }
+  .callout.warn::before {
+    content: "⚠ ";
+    color: var(--warn);
+    font-weight: 700;
+  }
+
+  .callout-title {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: var(--ink-faint);
+    margin-bottom: 8px;
+  }
+
+  /* CHECKLIST */
+  .checklist { list-style: none; padding: 0; margin: 24px 0; }
+  .checklist li {
+    padding: 12px 0 12px 32px;
+    position: relative;
+    border-bottom: 1px solid var(--line);
+    color: var(--ink-muted);
+  }
+  .checklist li:last-child { border-bottom: none; }
+  .checklist li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 18px;
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--line-strong);
+    border-radius: 3px;
+  }
+  .checklist li strong { color: var(--ink); }
+
+  /* SOURCES */
+  .sources {
+    background: var(--bg-elevated);
+    border-radius: 8px;
+    padding: 32px;
+    margin-top: 60px;
+  }
+
+  .sources h2 { margin-bottom: 20px; }
+
+  .sources ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    columns: 2;
+    column-gap: 32px;
+  }
+
+  .sources li {
+    padding: 6px 0;
+    font-size: 0.85rem;
+    break-inside: avoid;
+  }
+
+  .sources a {
+    color: var(--ink-muted);
+    text-decoration: none;
+    border-bottom: 1px solid var(--line);
+    padding-bottom: 1px;
+    transition: color 0.15s;
+  }
+  .sources a:hover { color: var(--accent); border-color: var(--accent); }
+
+  /* FOOTER */
+  footer {
+    text-align: center;
+    padding: 40px 24px 60px;
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.75rem;
+    color: var(--ink-faint);
+    letter-spacing: 0.08em;
+    border-top: 1px solid var(--line);
+  }
+
+  /* RESPONSIVE */
+  @media (max-width: 640px) {
+    .hero { padding: 60px 20px 50px; }
+    main { padding: 50px 20px; }
+    .tldr { padding: 24px; }
+    .sources ul { columns: 1; }
+    table { font-size: 0.85rem; }
+    th, td { padding: 10px 8px; }
+    .route { grid-template-columns: 80px 1fr; gap: 12px; }
+  }
+
+  @media print {
+    body { background: white; color: black; }
+    .hero { background: white; border-bottom: 2px solid black; }
+    .spot, .airport, .callout, .tldr, .sources { background: white; border: 1px solid #ccc; }
+  }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="eclipse-art">
+    <div class="corona"></div>
+    <div class="sun"></div>
+    <div class="moon"></div>
+  </div>
+  <h1>Total Solar Eclipse<br><em>Spain · 12 August 2026</em></h1>
+  <div class="meta">
+    <span>Wednesday</span>
+    <span>Totality 20:27–20:35 CEST</span>
+    <span>Up to ~1m 50s</span>
+  </div>
+</header>
+
+<main>
+
+<section class="tldr">
+  <div class="tldr-label">Recommendation</div>
+  <p><strong>Best viewing spot:</strong> Ebro Valley / Zaragoza area — ideally Bardenas Reales in Navarre. Lowest cloud probability on the entire eclipse track (~30% August average vs ~60% on the north coast), wide flat horizons (critical — sun will be only ~10° above horizon at totality), good road access, and a dramatic semi-desert landscape.</p>
+  <p><strong>Best UK gateway:</strong> Bilbao (~2hr direct flight, then ~2.5hr drive south to Bardenas) — or Madrid as a backup with more flight options from all three UK airports.</p>
+</section>
+
+<section>
+  <h2><span class="num">01 — The Problem</span>What you're actually solving for</h2>
+  <p class="lead">Two factors drive the whole trip plan: cloud cover and horizon altitude. Get either wrong and you've flown to Spain to see nothing.</p>
+
+  <h3>Clouds</h3>
+  <p>August in Spain is hot and convective storms build through the afternoon. Totality occurs late in the day (20:27–20:35 CEST), so afternoon clouds are a real threat. The Atlantic-facing northern coast averages ~60% cloud cover; the inland Ebro Valley drops below 30%.</p>
+
+  <h3>Horizon altitude</h3>
+  <p>The sun will be <strong>very</strong> low at totality — roughly 10° above the horizon in northern Spain, dropping to just 4° in the Balearic Islands. You need an unobstructed western horizon: no buildings, no trees, no hills. This rules out city centres and most forested or mountainous spots.</p>
+</section>
+
+<section>
+  <h2><span class="num">02 — Regions</span>Where to go, where to skip</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Region</th>
+        <th>Cloud cover (Aug avg)</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td><strong>Ebro Valley / Zaragoza</strong></td>
+        <td><span class="bar"><span class="bar-fill" data-level="excellent"></span>&lt;30%</span></td>
+        <td>Best mainland option. Clear on 18 of last 21 Aug 12ths.</td>
+      </tr>
+      <tr>
+        <td>Central Meseta (Burgos, León, Valladolid)</td>
+        <td><span class="bar"><span class="bar-fill" data-level="good"></span>~35%</span></td>
+        <td>Strong second choice. Flat horizons.</td>
+      </tr>
+      <tr>
+        <td>Soria / Logroño</td>
+        <td><span class="bar"><span class="bar-fill" data-level="ok"></span>35–45%</span></td>
+        <td>Decent, slightly more variable.</td>
+      </tr>
+      <tr>
+        <td>Mallorca (Palma)</td>
+        <td><span class="bar"><span class="bar-fill" data-level="good"></span>~25%</span></td>
+        <td>Unique sunset over sea, but sun only 4° up — high reward, high risk.</td>
+      </tr>
+      <tr>
+        <td><strong>North coast</strong> (Bilbao, Santander, Oviedo)</td>
+        <td><span class="bar"><span class="bar-fill" data-level="poor"></span>~60%</span></td>
+        <td>Avoid for viewing. Useful only as a gateway airport.</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout warn">
+    <div class="callout-title">Important</div>
+    <strong>Madrid and Barcelona are NOT in totality.</strong> They get ~99% partial coverage — visually impressive but not a total eclipse. You must drive into the path of totality.
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">03 — Spots</span>Ranked viewing locations</h2>
+
+  <div class="spots">
+
+    <div class="spot recommended">
+      <div class="spot-head">
+        <h3 class="spot-title"><span class="rank r1">1</span>Bardenas Reales · Navarre</h3>
+        <div class="spot-stats">
+          <span>~1m 45s totality</span>
+          <span>~30 min from Tudela</span>
+          <span>Best for photos</span>
+        </div>
+      </div>
+      <div class="spot-body">
+        Semi-desert badlands close to the centerline. Surreal eroded rock formations, wide unbroken horizons, very low light pollution. The astronomer/photographer pick — and the spot with arguably the best combination of weather odds, landscape, and totality duration anywhere in Spain.
+      </div>
+    </div>
+
+    <div class="spot recommended">
+      <div class="spot-head">
+        <h3 class="spot-title"><span class="rank r2">2</span>Zaragoza city &amp; outskirts</h3>
+        <div class="spot-stats">
+          <span>~1m 24s totality</span>
+          <span>Easy logistics</span>
+          <span>AVE 90 min from Madrid</span>
+        </div>
+      </div>
+      <div class="spot-body">
+        Best transport hub on the eclipse path. Hotels, restaurants, AVE high-speed rail, motorway access in every direction. The pragmatic choice if you don't want to camp out in a desert.
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="spot-head">
+        <h3 class="spot-title"><span class="rank">3</span>Burgos / Valladolid / León plateau</h3>
+        <div class="spot-stats">
+          <span>~1m 43s totality</span>
+          <span>Castilian meseta</span>
+        </div>
+      </div>
+      <div class="spot-body">
+        Central meseta plains — flat horizons, good cloud odds, slightly longer totality than Zaragoza. More pastoral and historic (Camino de Santiago territory). Burgos has good hotel capacity and an excellent cathedral as a backup activity.
+      </div>
+    </div>
+
+    <div class="spot">
+      <div class="spot-head">
+        <h3 class="spot-title"><span class="rank">4</span>Palma de Mallorca</h3>
+        <div class="spot-stats">
+          <span>~1m 36s totality</span>
+          <span>Sunset eclipse</span>
+          <span>S'Arenal beach</span>
+        </div>
+      </div>
+      <div class="spot-body">
+        Rare opportunity for a "sunset eclipse" over the Mediterranean. Sun at only 4° elevation — spectacular if conditions align, but any haze or sea-cloud ruins it. The high-reward, high-risk play.
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">04 — Flights</span>UK gateways &amp; direct routes</h2>
+
+  <div class="airports">
+
+    <div class="airport">
+      <div class="airport-head">
+        <h3 class="airport-name">London</h3>
+        <span class="airport-code">LGW · LHR · STN · LTN</span>
+      </div>
+      <p style="color: var(--ink-muted); font-size: 0.9rem; margin-bottom: 16px;">Most options by far — multiple carriers to every relevant Spanish city.</p>
+      <ul class="routes">
+        <li class="route"><span class="route-dest">→ Bilbao</span><span class="route-info">Vueling daily, easyJet, BA, Iberia · ~2h05 · best gateway by distance</span></li>
+        <li class="route"><span class="route-dest">→ Madrid</span><span class="route-info">BA, Iberia, easyJet, Ryanair, Vueling · multiple daily</span></li>
+        <li class="route"><span class="route-dest">→ Barcelona</span><span class="route-info">BA, Vueling, easyJet, Ryanair · multiple daily</span></li>
+        <li class="route"><span class="route-dest">→ Valencia</span><span class="route-info">Vueling, easyJet, Ryanair</span></li>
+        <li class="route"><span class="route-dest">→ Palma</span><span class="route-info">easyJet, Ryanair, Jet2, BA</span></li>
+      </ul>
+    </div>
+
+    <div class="airport">
+      <div class="airport-head">
+        <h3 class="airport-name">Bristol</h3>
+        <span class="airport-code">BRS</span>
+      </div>
+      <p style="color: var(--ink-muted); font-size: 0.9rem; margin-bottom: 16px;">Good direct options — especially the seasonal Bilbao route.</p>
+      <ul class="routes">
+        <li class="route"><span class="route-dest">→ Bilbao</span><span class="route-info">easyJet seasonal (May–Oct) · perfect timing</span></li>
+        <li class="route"><span class="route-dest">→ Madrid</span><span class="route-info">easyJet, Ryanair direct</span></li>
+        <li class="route"><span class="route-dest">→ Valencia</span><span class="route-info">Ryanair direct</span></li>
+        <li class="route"><span class="route-dest">→ Barcelona</span><span class="route-info">Limited — check Jet2 / easyJet</span></li>
+      </ul>
+    </div>
+
+    <div class="airport">
+      <div class="airport-head">
+        <h3 class="airport-name">Birmingham</h3>
+        <span class="airport-code">BHX</span>
+      </div>
+      <p style="color: var(--ink-muted); font-size: 0.9rem; margin-bottom: 16px;">Solid direct coverage on the main routes.</p>
+      <ul class="routes">
+        <li class="route"><span class="route-dest">→ Barcelona</span><span class="route-info">Vueling direct</span></li>
+        <li class="route"><span class="route-dest">→ Valencia</span><span class="route-info">Ryanair direct</span></li>
+        <li class="route"><span class="route-dest">→ Madrid</span><span class="route-info">Direct service available</span></li>
+        <li class="route"><span class="route-dest">→ Bilbao</span><span class="route-info">Direct service available</span></li>
+      </ul>
+    </div>
+
+  </div>
+</section>
+
+<section>
+  <h2><span class="num">05 — Pairings</span>Airport → viewing spot drive plan</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Fly into</th>
+        <th>Drive to</th>
+        <th>Drive time</th>
+        <th>Notes</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr style="background: rgba(255,184,77,0.04);">
+        <td><strong>Bilbao</strong></td>
+        <td>Bardenas Reales / Tudela</td>
+        <td class="mono">~2h 30m</td>
+        <td>★ Top pick — short flight, great spot</td>
+      </tr>
+      <tr>
+        <td>Bilbao</td>
+        <td>Burgos</td>
+        <td class="mono">~2h</td>
+        <td>Shortest drive, but crosses north-coast cloud risk</td>
+      </tr>
+      <tr>
+        <td>Bilbao</td>
+        <td>Zaragoza</td>
+        <td class="mono">~3h</td>
+        <td>Easy A-68 motorway down the Ebro</td>
+      </tr>
+      <tr>
+        <td><strong>Madrid</strong></td>
+        <td>Zaragoza</td>
+        <td class="mono">~3h (or 90 min AVE)</td>
+        <td>Train option — no need to drive at all</td>
+      </tr>
+      <tr>
+        <td>Madrid</td>
+        <td>Burgos</td>
+        <td class="mono">~3h</td>
+        <td>Straight north on A-1</td>
+      </tr>
+      <tr>
+        <td>Madrid</td>
+        <td>Bardenas Reales</td>
+        <td class="mono">~4h</td>
+        <td>Furthest, but doable</td>
+      </tr>
+      <tr>
+        <td>Barcelona</td>
+        <td>Zaragoza</td>
+        <td class="mono">~3h</td>
+        <td>Easy AP-2 west</td>
+      </tr>
+      <tr>
+        <td>Barcelona</td>
+        <td>Bardenas Reales</td>
+        <td class="mono">~4h</td>
+        <td>Via Lleida</td>
+      </tr>
+      <tr>
+        <td>Valencia</td>
+        <td>(stay or short drive)</td>
+        <td class="mono">0–60 min</td>
+        <td>Valencia is in totality path — but drive inland for clear horizon</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2><span class="num">06 — The Plan</span>What I'd actually do</h2>
+
+  <div class="callout">
+    <div class="callout-title">Recommended itinerary</div>
+    <p style="margin-bottom: 0;"><strong>Fly Bristol or London → Bilbao</strong> (Vueling/easyJet, ~2h05). <strong>Pick up rental car at BIO.</strong> Base yourself in <strong>Tudela or Logroño</strong> for 2–3 nights — both have decent hotels and are central to the eclipse zone. <strong>Eclipse day: drive to Bardenas Reales</strong> (30 min from Tudela), arrive midday, scout your spot, watch satellite imagery, reposition if needed.</p>
+  </div>
+
+  <p>This pairing has the best balance: short flight, excellent weather odds (Ebro Valley is the clear winner climatologically), dramatic location near the centerline, and easy reposition flexibility — Spanish motorways let you shift 90 minutes west toward Burgos or east toward Zaragoza on the morning of the eclipse if satellite shows trouble.</p>
+
+  <p><strong>Backup if Bristol/Bilbao isn't available:</strong> Fly to Madrid, take the 90-min AVE high-speed train to Zaragoza (no car needed at all), and base in Zaragoza city. Day-trip to Bardenas by rental car or join a local astronomy tour.</p>
+</section>
+
+<section>
+  <h2><span class="num">07 — Logistics</span>Practical warnings</h2>
+
+  <ul class="checklist">
+    <li><strong>Book flights and hotels NOW.</strong> Eclipse-path hotels in Zaragoza, Burgos, Tudela, and Logroño were already filling up months ago. This eclipse is heavily promoted across Europe.</li>
+    <li><strong>Reserve the rental car early.</strong> Surge pricing and shortages around eclipse day are guaranteed at every Spanish airport.</li>
+    <li><strong>Build a Plan B day.</strong> Drive flexibility is your weather insurance. Don't book non-refundable accommodation that pins you to one spot.</li>
+    <li><strong>Bring certified solar glasses</strong> (ISO 12312-2) for the partial phases. Spanish supplies will sell out closer to the date.</li>
+    <li><strong>It's a Wednesday.</strong> Book Mon–Fri off, or fly out Sat 8 Aug and return Sun 16 Aug for a proper week.</li>
+    <li><strong>Watch fuel and traffic.</strong> Eclipse-day road congestion in the path is a real thing. Fill up the night before; arrive at your viewing spot 3+ hours early.</li>
+    <li><strong>Phone signal in Bardenas is patchy.</strong> Download offline maps and weather apps in advance.</li>
+  </ul>
+</section>
+
+<section class="sources">
+  <h2>Sources</h2>
+  <ul>
+    <li><a href="https://eclipsophile.com/tse2026/">Eclipsophile — TSE 2026 climatology</a></li>
+    <li><a href="https://www.skyatnightmagazine.com/news/best-places-to-see-spanish-eclipse-august-2026">BBC Sky at Night — best places for totality</a></li>
+    <li><a href="https://www.euronews.com/next/2026/03/23/the-best-places-in-spain-to-watch-the-great-total-solar-eclipse-of-august-2026">Euronews — best Spanish viewing spots</a></li>
+    <li><a href="https://www.space.com/stargazing/solar-eclipses/15-expert-checked-places-to-see-the-2026-total-solar-eclipse-in-spain-iceland-and-greenland">Space.com — 15 expert-checked places</a></li>
+    <li><a href="https://nationaleclipse.com/cities/lists/2026-total-solar-eclipse-cities.html">NationalEclipse — 2026 city data</a></li>
+    <li><a href="https://www.helioclipse.com/en/blog/2026-totality-spain-path-basics-timing-centerline">Helioclipse — path, timing, centerline</a></li>
+    <li><a href="https://www.idealista.com/en/news/lifestyle-in-spain/2026/01/12/879217-spain-solar-eclipse-2026-where-and-when-to-see-the-total-eclipse">Idealista — Spain's eclipse 2026 guide</a></li>
+    <li><a href="https://theeclipse.app/2026-total/in/spain/navarre/bardenas-reales-de-navarra">TheEclipse.app — Bardenas Reales data</a></li>
+    <li><a href="https://www.bristolairport.co.uk/where-can-i-fly/">Bristol Airport — destinations</a></li>
+    <li><a href="https://www.birminghamairport.co.uk/destinations/where-we-fly/">Birmingham Airport — destinations</a></li>
+    <li><a href="https://www.flightsfrom.com/LGW-BIO">FlightsFrom — London Gatwick to Bilbao</a></li>
+    <li><a href="https://www.leshuttle.com/uk-en/discover/traveller-guides/driving-to-northern-spain-for-the-2026-solar-eclipse">LeShuttle — driving to northern Spain</a></li>
+    <li><a href="https://en.wikipedia.org/wiki/Solar_eclipse_of_August_12,_2026">Wikipedia — Solar eclipse of August 12, 2026</a></li>
+    <li><a href="https://www.timeanddate.com/eclipse/in/spain?iso=20260812">Time and Date — eclipse in Spain</a></li>
+  </ul>
+</section>
+
+</main>
+
+<footer>
+  Compiled 16 May 2026 · For Rafal · 88 days to totality
+</footer>
+
+</body>
+</html>
