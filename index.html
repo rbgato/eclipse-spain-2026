@@ -414,6 +414,28 @@
   }
   .checklist li strong { color: var(--ink); }
 
+  /* MAP */
+  .map-fig {
+    margin: 32px 0;
+  }
+
+  .map-fig svg {
+    display: block;
+    width: 100%;
+    height: auto;
+    border: 1px solid var(--line);
+    border-radius: 8px;
+    background: #0b101d;
+  }
+
+  .map-fig figcaption {
+    font-family: 'JetBrains Mono', monospace;
+    font-size: 0.72rem;
+    color: var(--ink-faint);
+    margin-top: 10px;
+    line-height: 1.5;
+  }
+
   /* SOURCES */
   .sources {
     background: var(--bg-elevated);
@@ -498,6 +520,7 @@
   <div class="tldr-label">Recommendation</div>
   <p><strong>Best viewing spot:</strong> Ebro Valley / Zaragoza area — ideally Bardenas Reales in Navarre. Lowest cloud probability on the entire eclipse track (~30% August average vs ~60% on the north coast), wide flat horizons (critical — sun will be only ~10° above horizon at totality), good road access, and a dramatic semi-desert landscape.</p>
   <p><strong>Best UK gateway:</strong> Bilbao (~2hr direct flight, then ~2.5hr drive south to Bardenas) — or Madrid as a backup with more flight options from all three UK airports.</p>
+  <p><strong>Starting from Barcelona instead?</strong> Don't drive to Bardenas. Alcañiz (~2h45, 1m 33s) or the Ebro Delta (~1h50, 1m 34s) get you <em>more</em> totality at a fraction of the drive — see <a href="#barcelona" style="color: var(--accent);">section 06</a>.</p>
 </section>
 
 <section>
@@ -566,13 +589,13 @@
       <div class="spot-head">
         <h3 class="spot-title"><span class="rank r1">1</span>Bardenas Reales · Navarre</h3>
         <div class="spot-stats">
-          <span>~1m 45s totality</span>
+          <span>~1m 15s totality</span>
           <span>~30 min from Tudela</span>
           <span>Best for photos</span>
         </div>
       </div>
       <div class="spot-body">
-        Semi-desert badlands close to the centerline. Surreal eroded rock formations, wide unbroken horizons, very low light pollution. The astronomer/photographer pick — and the spot with arguably the best combination of weather odds, landscape, and totality duration anywhere in Spain.
+        Semi-desert badlands with surreal eroded rock formations, wide unbroken horizons, very low light pollution, and the best weather odds in Spain. The astronomer/photographer pick. <strong>Duration correction (June update):</strong> some tourist sites claim ~1m 45s here, but NASA path geometry puts the centerline ~110 km further south — Tudela gets 1m 20s, the park interior ~1m 10–15s. You're trading ~25 s of totality for the best sky odds on the track; still usually a good trade.
       </div>
     </div>
 
@@ -724,13 +747,13 @@
         <td>Barcelona</td>
         <td>Zaragoza</td>
         <td class="mono">~3h</td>
-        <td>Easy AP-2 west</td>
+        <td>Easy AP-2 west — but see <a href="#barcelona" style="color: var(--accent);">§06</a> for closer options with more totality</td>
       </tr>
       <tr>
         <td>Barcelona</td>
         <td>Bardenas Reales</td>
         <td class="mono">~4h</td>
-        <td>Via Lleida</td>
+        <td>Via Lleida — not worth it from Barcelona (§06)</td>
       </tr>
       <tr>
         <td>Valencia</td>
@@ -742,8 +765,179 @@
   </table>
 </section>
 
+<section id="barcelona">
+  <h2><span class="num">06 — From Barcelona</span>The Barcelona drive plan</h2>
+  <p class="lead">Everything above was built around UK flights into Bilbao. Starting from Barcelona changes the answer completely: the edge of totality is only ~75 minutes down the coast, and the centerline crosses the Mediterranean at Peñíscola — much closer than Zaragoza or Bardenas.</p>
+
+  <figure class="map-fig">
+  <svg viewBox="0 0 860 769" role="img" aria-label="Map of north-east Spain showing the 12 August 2026 totality zone, centerline, and driving options from Barcelona" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <linearGradient id="bandGrad" x1="0" y1="0" x2="0.3" y2="1">
+        <stop offset="0" stop-color="#ffb84d" stop-opacity="0.20"/>
+        <stop offset="1" stop-color="#ff7a45" stop-opacity="0.09"/>
+      </linearGradient>
+    </defs>
+
+    <!-- sea -->
+    <rect width="860" height="769" fill="#0b101d"/>
+
+    <!-- land -->
+    <path d="M845.2,0 L808.1,51.2 L806.6,114.3 L825.9,132 L843.7,153.7 L815.5,191.2 L830.4,224.7 L815.5,250.3 L790.3,272 L768.1,285.8 L719.2,307.4 L689.5,325.2 L677.6,340.9 L649.5,362.6 L624.3,368.5 L582.7,378.4 L541.2,394.1 L532.3,406 L513,402 L493.8,415.8 L474.5,437.5 L462.6,449.3 L473,455.2 L502.7,469 L481.9,482.8 L453.7,498.6 L434.5,508.4 L425.6,518.3 L418.1,530.1 L415.2,540 L395.9,569.5 L379.6,583.3 L366.3,595.2 L357.4,622.7 L341,644.4 L326.2,681.9 L311.4,709.5 L306.9,725.2 L311.4,748.9 L317.3,768.6 L0,768.6 L0,0 Z" fill="#16161f"/>
+    <path d="M704.3,695.7 L716.2,677.9 L744.4,656.2 L778.5,636.5 L809.6,624.7 L831.9,618.8 L824.4,638.5 L818.5,644.4 L840.7,662.2 L860,670 L860,729.2 L834.8,741 L809.6,754.8 L793.3,739 L769.6,711.4 L762.2,703.5 L747.3,723.2 L731,717.3 L720.6,707.5 L704.3,695.7 Z" fill="#16161f" stroke="rgba(255,255,255,0.25)" stroke-width="1"/>
+
+    <!-- coastline + French border + Ebro river -->
+    <path d="M845.2,0 L808.1,51.2 L806.6,114.3 L825.9,132 L843.7,153.7 L815.5,191.2 L830.4,224.7 L815.5,250.3 L790.3,272 L768.1,285.8 L719.2,307.4 L689.5,325.2 L677.6,340.9 L649.5,362.6 L624.3,368.5 L582.7,378.4 L541.2,394.1 L532.3,406 L513,402 L493.8,415.8 L474.5,437.5 L462.6,449.3 L473,455.2 L502.7,469 L481.9,482.8 L453.7,498.6 L434.5,508.4 L425.6,518.3 L418.1,530.1 L415.2,540 L395.9,569.5 L379.6,583.3 L366.3,595.2 L357.4,622.7 L341,644.4 L326.2,681.9 L311.4,709.5 L306.9,725.2 L311.4,748.9 L317.3,768.6" fill="none" stroke="rgba(255,255,255,0.28)" stroke-width="1.2"/>
+    <path d="M825.9,132 L734,149.8 L652.4,145.8 L612.4,120.2 L570.9,98.5 L459.7,80.8 L355.9,80.8 L274.3,61.1 L192.8,35.5 L133.5,0" fill="none" stroke="rgba(255,255,255,0.14)" stroke-width="1" stroke-dasharray="2 4"/>
+    <path d="M225.4,285.8 L296.6,325.2 L355.9,350.8 L400.4,340.9 L437.4,368.5 L449.3,404 L433,451.3 L459.7,465.1" fill="none" stroke="rgba(110,160,231,0.3)" stroke-width="1.2"/>
+
+    <!-- totality band -->
+    <path d="M0,7.7 L29.7,26.9 L59.3,45.9 L89,64.7 L118.6,83.4 L148.3,101.8 L177.9,120.1 L207.6,138.2 L237.2,156 L266.9,173.7 L296.6,191.2 L326.2,208.5 L355.9,225.6 L385.5,242.6 L415.2,259.3 L444.8,275.8 L474.5,292.1 L504.2,308.3 L533.8,324.3 L563.5,340 L593.1,355.6 L622.8,371 L652.4,386.2 L682.1,401.2 L711.7,416 L741.4,430.6 L771.1,445 L800.7,459.2 L830.4,473.3 L860,487.1 L860,768.6 L292.1,768.6 L266.9,755.8 L237.2,741.1 L207.6,726.3 L177.9,711.2 L148.3,696 L118.6,680.5 L89,664.9 L59.3,649 L29.7,633 L0,616.7 Z" fill="url(#bandGrad)"/>
+    <path d="M0,7.7 L29.7,26.9 L59.3,45.9 L89,64.7 L118.6,83.4 L148.3,101.8 L177.9,120.1 L207.6,138.2 L237.2,156 L266.9,173.7 L296.6,191.2 L326.2,208.5 L355.9,225.6 L385.5,242.6 L415.2,259.3 L444.8,275.8 L474.5,292.1 L504.2,308.3 L533.8,324.3 L563.5,340 L593.1,355.6 L622.8,371 L652.4,386.2 L682.1,401.2 L711.7,416 L741.4,430.6 L771.1,445 L800.7,459.2 L830.4,473.3 L860,487.1" fill="none" stroke="rgba(255,184,77,0.55)" stroke-width="1.3"/>
+    <path d="M0,616.7 L29.7,633 L59.3,649 L89,664.9 L118.6,680.5 L148.3,696 L177.9,711.2 L207.6,726.3 L237.2,741.1 L266.9,755.8" fill="none" stroke="rgba(255,184,77,0.55)" stroke-width="1.3"/>
+    <path d="M0,324.9 L29.7,342.7 L59.3,360.4 L89,377.8 L118.6,395 L148.3,411.9 L177.9,428.7 L207.6,445.2 L237.2,461.5 L266.9,477.6 L296.6,493.5 L326.2,509.2 L355.9,524.7 L385.5,539.9 L415.2,554.9 L444.8,569.7 L474.5,584.3 L504.2,598.7 L533.8,612.9 L563.5,626.8 L593.1,640.5 L622.8,654.1 L652.4,667.4 L682.1,680.4 L711.7,693.3 L741.4,706 L771.1,718.4 L800.7,730.6 L830.4,742.6 L860,754.4" fill="none" stroke="#ffb84d" stroke-width="1.6" stroke-dasharray="8 6"/>
+
+    <!-- limit / centerline labels -->
+    <text transform="translate(655,378) rotate(26.4)" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="rgba(255,184,77,0.8)" letter-spacing="1.5">NORTHERN LIMIT OF TOTALITY</text>
+    <text transform="translate(97,652) rotate(27.5)" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="rgba(255,184,77,0.8)" letter-spacing="1.5">SOUTHERN LIMIT</text>
+    <text transform="translate(496,592) rotate(25.2)" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#ffb84d" letter-spacing="1.5">CENTERLINE — MAX ≈ 1M 40S</text>
+
+    <!-- motorway corridors -->
+    <path d="M677.6,337 L593.1,315.3 L449.3,295.6 L341,317.3 L281.7,311.4 L225.4,285.8 L163.1,246.3 L118.6,205" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.3" stroke-dasharray="2 5"/>
+    <path d="M677.6,337 L624.3,364.6 L541.2,390.2 L493.8,413.8 L462.6,447.3 L441.9,471 L425.6,516.3 L416.7,538" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.3" stroke-dasharray="2 5"/>
+    <path d="M449.3,295.6 L407.8,315.3 L349.9,368.5 L336.6,404" fill="none" stroke="rgba(255,255,255,0.3)" stroke-width="1.3" stroke-dasharray="2 5"/>
+
+    <!-- geography labels -->
+    <text x="390" y="42" font-family="'JetBrains Mono', monospace" font-size="11" fill="rgba(255,255,255,0.3)" letter-spacing="3">FRANCE</text>
+    <text x="150" y="475" font-family="'JetBrains Mono', monospace" font-size="11" fill="rgba(255,255,255,0.3)" letter-spacing="3">ESPAÑA</text>
+    <text x="630" y="565" font-family="'JetBrains Mono', monospace" font-size="10" fill="rgba(255,255,255,0.25)" letter-spacing="2">MEDITERRANEAN</text>
+    <text x="752" y="734" font-family="'JetBrains Mono', monospace" font-size="9" fill="rgba(255,255,255,0.3)" letter-spacing="1">MALLORCA</text>
+
+    <!-- context dots -->
+    <circle cx="449.3" cy="291.7" r="3" fill="#6b6878"/>
+    <text x="459" y="288" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#6b6878">Lleida ~30s</text>
+    <circle cx="762.2" cy="695.7" r="3" fill="#6b6878"/>
+    <text x="750" y="683" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#6b6878">Palma 1m36s</text>
+
+    <!-- viewing options -->
+    <circle cx="118.6" cy="205" r="5" fill="#ffb84d" stroke="#0a0a14" stroke-width="1.5"/>
+    <text x="130" y="201" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f3f0e8">Tudela · Bardenas</text>
+    <text x="130" y="214" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">≈4h · ~1m15s</text>
+
+    <circle cx="225.4" cy="285.8" r="5" fill="#ffb84d" stroke="#0a0a14" stroke-width="1.5"/>
+    <text x="238" y="281" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f3f0e8">Zaragoza</text>
+    <text x="238" y="294" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">≈3h · 1m24s</text>
+
+    <circle cx="349.9" cy="368.5" r="5" fill="#ffb84d" stroke="#0a0a14" stroke-width="1.5"/>
+    <text x="361" y="364" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f3f0e8">Caspe</text>
+    <text x="361" y="377" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">≈2h40 · 1m25s</text>
+
+    <circle cx="336.6" cy="404" r="6" fill="#ffb84d" stroke="#0a0a14" stroke-width="1.5"/>
+    <circle cx="336.6" cy="404" r="10.5" fill="none" stroke="#ffb84d" stroke-width="1.2" opacity="0.6"/>
+    <text x="322" y="408" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11.5" font-weight="700" fill="#ffb84d">Alcañiz ★</text>
+    <text x="322" y="421" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">≈2h45 · 1m33s</text>
+
+    <circle cx="441.9" cy="471" r="5" fill="#ffb84d" stroke="#0a0a14" stroke-width="1.5"/>
+    <text x="430" y="484" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f3f0e8">Ebro Delta · Amposta</text>
+    <text x="430" y="497" text-anchor="end" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">≈1h50 · 1m34s</text>
+
+    <circle cx="416.7" cy="540" r="5" fill="#ffb84d" stroke="#0a0a14" stroke-width="1.5"/>
+    <text x="429" y="536" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f3f0e8">Peñíscola · Vinaròs</text>
+    <text x="429" y="549" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">≈2h15 · 1m39s</text>
+
+    <circle cx="541.2" cy="390.2" r="5" fill="#ffb84d" stroke="#0a0a14" stroke-width="1.5"/>
+    <text x="553" y="398" font-family="'JetBrains Mono', monospace" font-size="11" fill="#f3f0e8">Tarragona · Cambrils</text>
+    <text x="553" y="411" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">≈1h15 · ~1m05s</text>
+
+    <!-- Barcelona -->
+    <circle cx="677.6" cy="337" r="10" fill="none" stroke="rgba(243,240,232,0.5)" stroke-width="1.2"/>
+    <circle cx="677.6" cy="337" r="5.5" fill="#f3f0e8" stroke="#0a0a14" stroke-width="1.5"/>
+    <text x="694" y="331" font-family="'JetBrains Mono', monospace" font-size="12" font-weight="700" fill="#f3f0e8">BARCELONA</text>
+    <text x="694" y="345" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#f87171">99% partial · not total</text>
+
+    <!-- legend -->
+    <g transform="translate(588,16)">
+      <rect width="206" height="136" rx="6" fill="rgba(10,10,20,0.85)" stroke="rgba(255,255,255,0.16)"/>
+      <rect x="13" y="16" width="22" height="10" fill="#ffb84d" opacity="0.18" stroke="rgba(255,184,77,0.55)"/>
+      <text x="44" y="25" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">zone of totality</text>
+      <line x1="13" y1="44" x2="35" y2="44" stroke="#ffb84d" stroke-width="1.6" stroke-dasharray="6 4"/>
+      <text x="44" y="48" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">centerline</text>
+      <circle cx="24" cy="66" r="5" fill="#ffb84d" stroke="#0a0a14" stroke-width="1.5"/>
+      <text x="44" y="70" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">option · drive · totality</text>
+      <circle cx="24" cy="88" r="5" fill="#f3f0e8" stroke="#0a0a14" stroke-width="1.5"/>
+      <text x="44" y="92" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">Barcelona (partial only)</text>
+      <line x1="13" y1="110" x2="35" y2="110" stroke="rgba(255,255,255,0.4)" stroke-width="1.3" stroke-dasharray="2 4"/>
+      <text x="44" y="114" font-family="'JetBrains Mono', monospace" font-size="9.5" fill="#9e9aa8">motorway corridor</text>
+      <line x1="13" y1="126" x2="102" y2="126" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <line x1="13" y1="122" x2="13" y2="130" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <line x1="102" y1="122" x2="102" y2="130" stroke="rgba(255,255,255,0.4)" stroke-width="1"/>
+      <text x="110" y="129" font-family="'JetBrains Mono', monospace" font-size="9" fill="#6b6878">50 km</text>
+    </g>
+  </svg>
+  <figcaption>Totality band &amp; centerline computed from the NASA GSFC path table (quadratic fit, verified against 11 town timings — Pamplona partial at 0.999 magnitude, Vilanova 25s, Soria 1m42s, Caspe 1m25s, Peñíscola 1m39s all reproduced). Coastline simplified. Drive times from central Barcelona in normal traffic — eclipse-day traffic will be worse.</figcaption>
+  </figure>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Spot</th>
+        <th>Drive</th>
+        <th>Totality</th>
+        <th>Verdict</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>Tarragona / Cambrils</td>
+        <td class="mono">~1h 15m</td>
+        <td class="mono">1m 00–1m 11s</td>
+        <td>Shortest hop into the path — but Eclipsophile specifically flags this coastline as the cloudy corner of the dry zone</td>
+      </tr>
+      <tr>
+        <td><strong>Ebro Delta</strong> (Amposta / Deltebre)</td>
+        <td class="mono">~1h 50m</td>
+        <td class="mono">~1m 34s</td>
+        <td>Minimal-drive sweet spot. Dead-flat rice fields with ~40 km of open horizon to the WNW — the distant Ports massif subtends only ~2°, sun will be ~8–9° up</td>
+      </tr>
+      <tr>
+        <td>Peñíscola / Vinaròs</td>
+        <td class="mono">~2h 15m</td>
+        <td class="mono">1m 38–39s</td>
+        <td>Practically on the centerline — longest totality this close. But the WNW view from the beach is over inland hills under the Sistema Ibérico cloud band. High reward, high risk</td>
+      </tr>
+      <tr style="background: rgba(255,184,77,0.04);">
+        <td><strong>Alcañiz / Caspe</strong> (Bajo Aragón)</td>
+        <td class="mono">~2h 40m</td>
+        <td class="mono">1m 25–1m 33s</td>
+        <td>★ Best overall from Barcelona: dry Ebro-depression climate, inland from coastal haze, flat steppe horizons — and more totality than Zaragoza or Bardenas</td>
+      </tr>
+      <tr>
+        <td>Zaragoza</td>
+        <td class="mono">~3h</td>
+        <td class="mono">1m 24s</td>
+        <td>Fine hub, but from Barcelona it's more driving for less totality than Alcañiz</td>
+      </tr>
+      <tr>
+        <td>Tudela / Bardenas Reales</td>
+        <td class="mono">~4h</td>
+        <td class="mono">~1m 15s</td>
+        <td>Best cloud odds in Spain, but the long haul buys you <em>less</em> totality than Alcañiz — only worth it for the landscape</td>
+      </tr>
+    </tbody>
+  </table>
+
+  <div class="callout">
+    <div class="callout-title">Recommendation from Barcelona</div>
+    <p style="margin-bottom: 0;"><strong>Drive to Alcañiz</strong> (~2h 45m via AP-7/N-420, or AP-2 via Lleida and Caspe). It sits in the same sub-35% cloud climate as Zaragoza, the surrounding steppe gives clean flat horizons for a sun only ~9° high, and 1m 33s of totality is within ~8 s of the maximum available anywhere that evening. Weather insurance is built in: on eclipse morning the N-232/A-68 lets you shift toward Zaragoza or the coast within an hour, whichever way the satellite picture looks better. If you'd rather barely drive at all, the <strong>Ebro Delta at ~1h 50m</strong> gives 1m 34s with perfect horizons — at slightly worse cloud odds.</p>
+  </div>
+
+  <div class="callout warn">
+    <div class="callout-title">Coast caveat</div>
+    At totality the sun is at azimuth ~286° — looking <strong>WNW means looking inland</strong> from any beach on this coast. From Peñíscola or Castellón that line of sight runs straight over the foothills where the Sistema Ibérico's evening storm debris collects. The Ebro Delta is the exception: the river plain runs flat to the WNW for tens of kilometres. If you choose the coast for the longer totality, scout an elevated spot or a south-facing stretch of shore with low terrain to the WNW.
+  </div>
+</section>
+
 <section>
-  <h2><span class="num">06 — The Plan</span>What I'd actually do</h2>
+  <h2><span class="num">07 — The Plan</span>What I'd actually do</h2>
 
   <div class="callout">
     <div class="callout-title">Recommended itinerary</div>
@@ -756,7 +950,7 @@
 </section>
 
 <section>
-  <h2><span class="num">07 — Logistics</span>Practical warnings</h2>
+  <h2><span class="num">08 — Logistics</span>Practical warnings</h2>
 
   <ul class="checklist">
     <li><strong>Book flights and hotels NOW.</strong> Eclipse-path hotels in Zaragoza, Burgos, Tudela, and Logroño were already filling up months ago. This eclipse is heavily promoted across Europe.</li>
@@ -786,13 +980,16 @@
     <li><a href="https://www.leshuttle.com/uk-en/discover/traveller-guides/driving-to-northern-spain-for-the-2026-solar-eclipse">LeShuttle — driving to northern Spain</a></li>
     <li><a href="https://en.wikipedia.org/wiki/Solar_eclipse_of_August_12,_2026">Wikipedia — Solar eclipse of August 12, 2026</a></li>
     <li><a href="https://www.timeanddate.com/eclipse/in/spain?iso=20260812">Time and Date — eclipse in Spain</a></li>
+    <li><a href="https://eclipse.gsfc.nasa.gov/SEpath/SEpath2001/SE2026Aug12Tpath.html">NASA GSFC — 2026 Aug 12 path coordinates (map geometry)</a></li>
+    <li><a href="https://theeclipse.app/2026-total/in/spain/catalonia">TheEclipse.app — Catalonia totality durations</a></li>
+    <li><a href="https://www.timeanddate.com/eclipse/in/spain/pamplona?iso=20260812">Time and Date — Pamplona (partial, 0.999 — northern limit check)</a></li>
   </ul>
 </section>
 
 </main>
 
 <footer>
-  Compiled 16 May 2026 · For Rafal · 88 days to totality
+  Compiled 16 May 2026 · Barcelona section &amp; map added 12 June 2026 · For Rafal · 61 days to totality
 </footer>
 
 </body>
